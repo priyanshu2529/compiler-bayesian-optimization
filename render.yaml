@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: compiler-bayesian-optimization
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/dashboard/summary
+    envVars:
+      - key: PORT
+        value: 8000

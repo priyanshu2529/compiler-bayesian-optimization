@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #0f1013;
+  --bg-secondary: #16181d;
+  --bg-card: #1c1e24;
+  --bg-card-hover: #22252d;
+  --border-subtle: #272a33;
+  --border-strong: #383c4a;
+  --text-main: #e2e4e9;
+  --text-muted: #8b909e;
+  --text-dim: #5c6270;
+  --accent-green: #10b981;
+  --accent-green-bg: #064e3b;
+  --accent-orange: #f97316;
+  --accent-blue: #38bdf8;
+  --status-err: #ef4444;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom scrollbar for developer aesthetics */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121316;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2f3a;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3e4454;
+}
+
+/* Technical grid and borders */
+.tech-border {
+  border: 1px solid var(--border-subtle);
+}
+.tech-border-b {
+  border-bottom: 1px solid var(--border-subtle);
+}
+.tech-border-t {
+  border-top: 1px solid var(--border-subtle);
+}
+.tech-border-r {
+  border-right: 1px solid var(--border-subtle);
+}
+.tech-panel {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+}
+.tech-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.tech-card:hover {
+  border-color: var(--border-strong);
+}
+
+/* Terminal & Log styling */
+.terminal-window {
+  background-color: #0b0c0e;
+  border: 1px solid #22252e;
+  font-family: var(--font-mono);
+}
+
+/* Status badges */
+.badge-tech {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  border-radius: 2px;
+  border: 1px solid transparent;
+}
+.badge-green {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  border-color: rgba(16, 185, 129, 0.25);
+}
+.badge-orange {
+  background-color: rgba(249, 115, 22, 0.1);
+  color: #fb923c;
+  border-color: rgba(249, 115, 22, 0.25);
+}
+.badge-gray {
+  background-color: rgba(139, 144, 158, 0.1);
+  color: #9ca3af;
+  border-color: rgba(139, 144, 158, 0.25);
+}
+.badge-blue {
+  background-color: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.25);
+}
+.badge-red {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #10b981;
+  color: #042f24;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 3px;
+  border: 1px solid #10b981;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+.btn-primary:hover {
+  background-color: #059669;
+  border-color: #059669;
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: #1c1e24;
+  color: #e2e4e9;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 3px;
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+.btn-secondary:hover {
+  background-color: #242730;
+  border-color: var(--border-strong);
+}
+
+.btn-danger {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 3px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-danger:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+}
